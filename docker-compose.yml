@@ -1,0 +1,19 @@
+services:
+  cognito-local:
+    image: jagregory/cognito-local:latest
+    container_name: cognito_local
+    ports:
+      - "9229:9229"
+    volumes:
+      - "./.cognito_data:/app/.cognito"
+    environment:
+      JAVA_TOOL_OPTIONS: "-Xms512m -Xmx2048m"   # aumenta heap
+      PORT: "9229"
+    mem_limit: 3g     # limite de memória do container
+    cpus: 4           # CPUs dedicadas (ajuste conforme sua máquina)
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9229/"]
+      interval: 10s
+      timeout: 2s
+      retries: 5

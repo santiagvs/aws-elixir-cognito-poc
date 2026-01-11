@@ -1,0 +1,60 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "mix_task",
+            "name": "Start Server with Debug",
+            "request": "launch",
+            "task": "run",
+            "taskArgs": ["--no-halt"],
+            "projectDir": "${workspaceRoot}",
+            "startApps": true,
+            "env": {
+                "COGNITO_USER_POOL_ID": "us-east-1rglpfbngc",
+                "COGNITO_CLIENT_ID": "1k0ehv1a56d3607pl86v6i0i5v",
+                "COGNITO_CLIENT_SECRET": "9vrdo3268lndb1bhdnpa2jvm73favj85letakfjcd7r9goohfpo",
+                "AWS_REGION": "us-east-1",
+                "AWS_ACCESS_KEY_ID": "sua_access_key",
+                "AWS_SECRET_ACCESS_KEY": "sua_secret_key"
+            }
+        },
+        {
+            "type": "mix_task",
+            "name": "Start IEx Session",
+            "request": "launch",
+            "task": "run",
+            "taskArgs": [],
+            "projectDir": "${workspaceRoot}",
+            "startApps": true,
+            "env": {
+                "COGNITO_USER_POOL_ID": "us-east-1rglpfbngc",
+                "COGNITO_CLIENT_ID": "1k0ehv1a56d3607pl86v6i0i5v",
+                "COGNITO_CLIENT_SECRET": "9vrdo3268lndb1bhdnpa2jvm73favj85letakfjcd7r9goohfpo",
+                "AWS_REGION": "us-east-1",
+                "AWS_ACCESS_KEY_ID": "sua_access_key",
+                "AWS_SECRET_ACCESS_KEY": "sua_secret_key"
+            }
+        },
+        {
+            "type": "mix_task",
+            "name": "mix test",
+            "request": "launch",
+            "task": "test",
+            "taskArgs": ["--trace"],
+            "startApps": true,
+            "projectDir": "${workspaceRoot}",
+            "requireFiles": [
+                "test/**/test_helper.exs",
+                "test/**/*_test.exs"
+            ],
+            "env": {
+                "COGNITO_USER_POOL_ID": "us-east-1rglpfbngc",
+                "COGNITO_CLIENT_ID": "1k0ehv1a56d3607pl86v6i0i5v",
+                "COGNITO_CLIENT_SECRET": "9vrdo3268lndb1bhdnpa2jvm73favj85letakfjcd7r9goohfpo",
+                "AWS_REGION": "us-east-1",
+                "AWS_ACCESS_KEY_ID": "sua_access_key",
+                "AWS_SECRET_ACCESS_KEY": "sua_secret_key"
+            }
+        }
+    ]
+}
