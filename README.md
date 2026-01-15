@@ -1,6 +1,7 @@
 # Cognito PoC
 
 Prova de conceito para autenticação com AWS Cognito usando Elixir.
+Escrevi um artigo sobre esse experimento aqui: https://medium.com/@ilgvfo/comparando-python-fastapi-vs-elixir-em-um-microservice-de-login-com-aws-cognito-c5c177e2344f
 
 ## Pré-requisitos
 
